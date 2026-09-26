@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact-footer" className="relative z-20 w-full bg-transparent text-white pt-20 pb-12 border-t border-white/10 overflow-hidden">
+    <footer id="contact-footer" className="relative z-20 w-full bg-transparent text-white pt-20 border-t border-white/10 overflow-hidden">
       
       {/* Ambient background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-gradient-to-t from-[#ff7a00]/10 to-transparent blur-[120px] pointer-events-none -z-10" />

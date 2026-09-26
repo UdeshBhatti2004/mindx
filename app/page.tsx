@@ -9,6 +9,7 @@ import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection"
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
+import MapSection from "@/components/MapSection";
 
 export default function Home() {
   /*
@@ -63,11 +64,15 @@ export default function Home() {
       {/* SECTION 3: SERVICES */}
       <ServicesSection />
 
-      {/* SECTION 5: Contact */}
+      {/* SECTION 4: Contact */}
       <ContactSection/>
 
+      
+      {/* SECTION 5: Map */}
+      <MapSection/>
 
-      {/* SECTION 5: Footer */}
+
+      {/* SECTION 6: Footer */}
       <Footer/>
 
       {/* You can easily add <ServicesSection id="services" /> here later! */}

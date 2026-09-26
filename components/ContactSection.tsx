@@ -23,7 +23,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative z-20 w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <section id="contact" className="relative z-20 w-full max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
       
       {/* Cinematic ambient background glow */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden flex justify-center items-center">
@@ -131,10 +131,17 @@ export default function ContactSection() {
             </ul>
           </div>
 
+          {/* Premium Agency-Style Live Status Badge */}
           <div className="mt-12 pt-8 border-t border-white/5">
-            <p className="text-xs font-mono text-white/30 uppercase tracking-widest">
-              mindX // your x factor
-            </p>
+            <div className="inline-flex items-center gap-3 rounded-full border border-white/5 bg-white/[0.01] px-4 py-2">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ff7a00] opacity-75"></span>
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#ff7a00]"></span>
+              </span>
+              <p className="text-xs font-mono text-white/50 tracking-wider uppercase mt-px">
+                Accepting New Enrollments
+              </p>
+            </div>
           </div>
         </motion.div>
 
