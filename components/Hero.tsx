@@ -64,7 +64,7 @@ export default function Hero({ rotateX, rotateY }: HeroProps) {
           className="mt-8 flex items-center justify-center gap-4 sm:mt-10"
         >
           <motion.a
-            href="/services"
+            href="#services"
             whileHover={{
               scale: 1.04,
               boxShadow: "0 0 30px rgba(255,122,0,.25)",

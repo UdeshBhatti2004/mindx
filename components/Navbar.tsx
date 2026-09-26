@@ -53,7 +53,7 @@ export default function Navbar() {
             <img
               src="/mindx-logo.png"
               alt="mindX"
-              className="w-full h-auto object-contain block drop-shadow-md"
+              className="w-full h-auto  object-contain block drop-shadow-md"
             />
           </a>
 

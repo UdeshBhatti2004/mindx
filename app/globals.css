@@ -6,12 +6,44 @@
   --font-display: var(--font-space), ui-sans-serif, system-ui, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+/* =========================================
+   GLOBAL RESET & HIDE ALL SCROLLBARS
+========================================= */
+html, body {
   margin: 0;
   background: #080808;
   color: #ffffff;
+  overflow-x: hidden; /* Instantly kills the horizontal scrollbar */
+  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Hides scrollbar in Chrome, Safari, and Edge */
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================
+   LENIS SMOOTH SCROLL REQUIRED CSS
+========================================= */
+html.lenis, html.lenis body {
+  height: auto;
+  width: 100%; /* Changed from 100vw to prevent horizontal overflow */
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }

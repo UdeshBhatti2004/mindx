@@ -1,15 +1,16 @@
 "use client";
 
 import { useMotionValue, useSpring, useTransform } from "framer-motion";
+import Preloader from "@/components/Preloader"; // <-- Imported the new Preloader
 import Background from "../components/Background";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import FloatingIcons from "../components/FloatingIcons";
 import AboutSection from "../components/AboutSection";
-import ServicesSection from "../components/ServicesSection"
-import Footer from "@/components/Footer";
+import ServicesSection from "../components/ServicesSection";
 import ContactSection from "@/components/ContactSection";
 import MapSection from "@/components/MapSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   /*
@@ -46,6 +47,9 @@ export default function Home() {
       onMouseLeave={resetMouse}
       className="relative min-h-screen w-full overflow-hidden bg-[#080808] text-white selection:bg-[#ff7a00]/30"
     >
+      {/* --- PRELOADER (Loads first, then slides up to reveal the site) --- */}
+      <Preloader />
+
       {/* Background glow follows your mouse everywhere on the site */}
       <Background glowX={glowX} glowY={glowY} />
       
@@ -61,24 +65,17 @@ export default function Home() {
       {/* --- SECTION 2: ABOUT --- */}
       <AboutSection />
 
-      {/* SECTION 3: SERVICES */}
+      {/* --- SECTION 3: SERVICES --- */}
       <ServicesSection />
 
-      {/* SECTION 4: Contact */}
-      <ContactSection/>
-
+      {/* --- SECTION 4: CONTACT --- */}
+      <ContactSection />
       
-      {/* SECTION 5: Map */}
-      <MapSection/>
+      {/* --- SECTION 5: MAP --- */}
+      <MapSection />
 
-
-      {/* SECTION 6: Footer */}
-      <Footer/>
-
-      {/* You can easily add <ServicesSection id="services" /> here later! */}
-      
-      {/* Spacer to allow scrolling past the About section so you can see it work */}
-      <div className="h-[20vh]" /> 
+      {/* --- SECTION 6: FOOTER --- */}
+      <Footer />
     </main>
   );
 }
