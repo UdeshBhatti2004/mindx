@@ -3,6 +3,7 @@
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const { scrollY } = useScroll();
@@ -42,18 +43,20 @@ export default function Navbar() {
       <div className="fixed left-0 right-0 top-0 z-50 flex justify-center px-4 pt-4 pointer-events-none sm:px-6 md:pt-6">
         <motion.header
           layout
-          className={`pointer-events-auto flex items-center justify-between rounded-full border transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-            isScrolled
-              ? "h-16 w-full max-w-4xl border-white/10 bg-[#080808]/90 px-4 backdrop-blur-xl sm:px-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
-              : "h-20 w-full max-w-7xl border-transparent bg-transparent px-2 sm:px-4"
-          }`}
+          className={`pointer-events-auto flex items-center justify-between rounded-full border transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${isScrolled
+            ? "h-16 w-full max-w-4xl border-white/10 bg-[#080808]/90 px-4 backdrop-blur-xl sm:px-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+            : "h-20 w-full max-w-7xl border-transparent bg-transparent px-2 sm:px-4"
+            }`}
         >
           {/* LOGO */}
           <a href="#home" className="relative z-50 flex shrink-0 items-center w-36 sm:w-44 md:w-48">
-            <img
+            <Image
               src="/mindx-logo.png"
-              alt="mindX"
-              className="w-full h-auto  object-contain block drop-shadow-md"
+              alt="mindX Institute logo"
+              width={866}
+              height={288}
+              priority
+              className="w-full h-auto object-contain block drop-shadow-md"
             />
           </a>
 
@@ -114,7 +117,7 @@ export default function Navbar() {
             {/* Top bar inside overlay */}
             <div className="flex items-center justify-between w-full px-6 pt-6">
               <div className="w-32">
-                <img src="/mindx-logo.png" alt="mindX" className="w-full h-auto object-contain" />
+                <Image src="/mindx-logo.png" alt="mindX Institute logo" width={866} height={288} className="w-full h-auto object-contain" />
               </div>
               <button
                 onClick={() => setMobileMenuOpen(false)}
@@ -127,7 +130,7 @@ export default function Navbar() {
 
             {/* Center navigation links — Left aligned, premium sizing */}
             <div className="flex-1 flex flex-col justify-center px-8 sm:px-12">
-              <motion.span 
+              <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1, duration: 0.5 }}
@@ -135,7 +138,7 @@ export default function Navbar() {
               >
                 // Navigation
               </motion.span>
-              
+
               <div className="flex flex-col gap-6">
                 {[
                   { label: "Home", href: "#home", num: "01" },
@@ -162,7 +165,7 @@ export default function Navbar() {
             </div>
 
             {/* Bottom info — Brand Punchline & CTA */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
@@ -170,11 +173,11 @@ export default function Navbar() {
             >
               <div>
                 <p className="font-display text-xl font-bold tracking-tight text-white leading-tight">
-                  SHAPE THE FUTURE.<br/>
+                  SHAPE THE FUTURE.<br />
                   <span className="text-white/40">MASTER THE SKILL.</span>
                 </p>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <p className="text-[10px] font-mono text-white/40 tracking-wider">RAJKOT, GUJARAT</p>
                 <a

@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, Send, CheckCircle2, MapPin, Mail, Phone } from "lucide-react";
-import { useState, FormEvent } from "react";
-
+import { useState, SyntheticEvent } from "react";
 const interests = [
   "Standards 1–9",
   "Tally with GST",
@@ -15,16 +14,45 @@ const interests = [
 export default function ContactSection() {
   const [selectedInterest, setSelectedInterest] = useState("Standards 1–9");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({ name: "", contact: "", message: "" });
 
-  const handleSubmit = (e: FormEvent) => {
+   const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSending(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          contact: formData.contact,
+          interest: selectedInterest,
+          message: formData.message,
+        }),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({ name: "", contact: "", message: "" });
+      } else {
+        setError("Something went wrong. Please try again or email us directly.");
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
-    <section id="contact" className="relative z-20 w-full max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-      
+    <section id="contact" className="relative z-20 w-full max-w-7xl  px-4 py-16 sm:px-6 lg:px-8">
+
       {/* Cinematic ambient background glow */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden flex justify-center items-center">
         <div className="w-[600px] h-[600px] bg-[#ff7a00]/[0.04] blur-[150px] rounded-full" />
@@ -56,7 +84,7 @@ export default function ContactSection() {
         </motion.h2>
 
         {/* Minimalist framing divider line matching About & Services sections */}
-        <motion.div 
+        <motion.div
           initial={{ scaleX: 0, opacity: 0 }}
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: true }}
@@ -73,7 +101,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mx-auto max-w-2xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
+          className=" max-w-2xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
         >
           Have questions about our programs or admissions? Drop us a message below and our team will get back to you shortly.
         </motion.p>
@@ -81,7 +109,7 @@ export default function ContactSection() {
 
       {/* INTERACTIVE SPLIT CONTAINER */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
+
         {/* LEFT SIDE: Direct Info & Vibe */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -115,7 +143,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs font-mono uppercase tracking-wider text-white/40">Email Us</p>
-                  <p className="text-sm text-white/80 mt-1">support@mindx.edu</p>
+                  <p className="text-sm text-white/80 mt-1">mindxyourxfactor@gmail.com</p>
                 </div>
               </li>
 
@@ -125,7 +153,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs font-mono uppercase tracking-wider text-white/40">Inquiries</p>
-                  <p className="text-sm text-white/80 mt-1">+91 XXXXX XXXXX</p>
+                  <p className="text-sm text-white/80 mt-1">+91 79904 96001</p>
                 </div>
               </li>
             </ul>
@@ -154,7 +182,7 @@ export default function ContactSection() {
           className="lg:col-span-7 rounded-3xl border border-white/10 bg-[#0c0c0c]/90 p-8 sm:p-10 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
         >
           {isSubmitted ? (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               className="flex flex-col items-center justify-center text-center py-16"
@@ -175,7 +203,8 @@ export default function ContactSection() {
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
-              
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
               {/* Interest Selector Pills */}
               <div>
                 <label className="block text-xs font-mono uppercase tracking-wider text-white/40 mb-3">
@@ -187,11 +216,10 @@ export default function ContactSection() {
                       key={item}
                       type="button"
                       onClick={() => setSelectedInterest(item)}
-                      className={`rounded-full px-4 py-2 text-xs font-medium transition-all cursor-pointer ${
-                        selectedInterest === item
-                          ? "bg-[#ff7a00] text-black font-semibold shadow-[0_0_15px_rgba(255,122,0,0.4)]"
-                          : "border border-white/10 bg-white/[0.03] text-white/60 hover:border-white/20 hover:text-white"
-                      }`}
+                      className={`rounded-full px-4 py-2 text-xs font-medium transition-all cursor-pointer ${selectedInterest === item
+                        ? "bg-[#ff7a00] text-black font-semibold shadow-[0_0_15px_rgba(255,122,0,0.4)]"
+                        : "border border-white/10 bg-white/[0.03] text-white/60 hover:border-white/20 hover:text-white"
+                        }`}
                     >
                       {item}
                     </button>
@@ -246,13 +274,17 @@ export default function ContactSection() {
               </div>
 
               {/* Submit Button */}
+              {error && (
+                <p className="text-xs text-red-400 text-center -mb-2">{error}</p>
+              )}
               <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ scale: isSending ? 1 : 1.02 }}
+                whileTap={{ scale: isSending ? 1 : 0.98 }}
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 rounded-2xl bg-[#ff7a00] py-4 text-sm font-semibold text-black transition-colors hover:bg-[#ffaa00] shadow-[0_0_25px_rgba(255,122,0,0.3)] cursor-pointer"
+                disabled={isSending}
+                className="w-full flex items-center justify-center gap-2 rounded-2xl bg-[#ff7a00] py-4 text-sm font-semibold text-black transition-colors hover:bg-[#ffaa00] shadow-[0_0_25px_rgba(255,122,0,0.3)] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                <span>Send Inquiry</span>
+                <span>{isSending ? "Sending..." : "Send Inquiry"}</span>
                 <Send size={16} />
               </motion.button>
 

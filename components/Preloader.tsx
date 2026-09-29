@@ -5,19 +5,29 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
+  const [shouldRender, setShouldRender] = useState(true);
 
   useEffect(() => {
-    // Lock scrolling while loading
+    // Skip the preloader if it already played earlier this session
+    if (sessionStorage.getItem("mindx-preloaded")) {
+      setIsLoading(false);
+      setShouldRender(false);
+      return;
+    }
+
     document.body.style.overflow = "hidden";
     window.scrollTo(0, 0);
 
     const timer = setTimeout(() => {
       setIsLoading(false);
       document.body.style.overflow = "";
-    }, 3500);
+      sessionStorage.setItem("mindx-preloaded", "true");
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
+
+  if (!shouldRender) return null; 
 
   return (
     <AnimatePresence>
