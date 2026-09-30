@@ -55,17 +55,18 @@ export default function AboutSection() {
                 </motion.div>
 
                 <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    className="font-display text-4xl font-bold tracking-tight text-white/95 sm:text-5xl lg:text-7xl lg:leading-[1.1]"
-                >
-                    Empowering minds. <br className="hidden sm:block" />
-                    <span className="bg-gradient-to-br from-[#ff7a00] to-[#ffaa00] bg-clip-text pr-2 italic text-transparent">
-                        Building futures.
-                    </span>
-                </motion.h2>
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.1 }}
+  className="font-display text-3xl font-bold tracking-tight text-white/95 sm:text-5xl lg:text-7xl lg:leading-[1.1]"
+>
+  Empowering minds.
+  <br />
+  <span className="bg-gradient-to-br from-[#ff7a00] to-[#ffaa00] bg-clip-text pr-2 italic text-transparent">
+    Building futures.
+  </span>
+</motion.h2>
 
                 {/* Minimalist framing divider lines */}
                 <motion.div
