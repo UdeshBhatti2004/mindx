@@ -45,7 +45,7 @@ const services = [
 export default function ServicesSection() {
   return (
     <section id="services" className="relative z-20 w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      
+
       {/* CINEMATIC BACKGROUND LIGHTS */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <motion.div
@@ -84,7 +84,7 @@ export default function ServicesSection() {
         </motion.h2>
 
         {/* Minimalist framing divider line matching About Section */}
-        <motion.div 
+        <motion.div
           initial={{ scaleX: 0, opacity: 0 }}
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: true }}
@@ -103,8 +103,7 @@ export default function ServicesSection() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className=" max-w-3xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
         >
-          Explore our structured academic and professional training paths built to elevate your knowledge, sharpen technical skills, and prepare you for the future.
-        </motion.p>
+          Explore academic coaching, computer courses, Tally with GST, CCC, and coding classes for kids at mindx in Rajkot.        </motion.p>
       </div>
 
       {/* CARDS GRID */}

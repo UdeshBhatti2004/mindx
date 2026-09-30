@@ -28,7 +28,7 @@ const spaceGrotesk = Space_Grotesk({
 // This single constant feeds metadataBase, canonical URLs, OG/Twitter tags,
 // sitemap.ts, robots.ts and the JSON-LD block below.
 // ---------------------------------------------------------------------------
-const SITE_URL = "https://mind-x.co.in";
+const SITE_URL = "https://www.mind-x.co.in";
 
 const SITE_NAME = "mindX Institute";
 const TITLE = "mindX Institute | Coaching Classes & Skill Courses in Rajkot";

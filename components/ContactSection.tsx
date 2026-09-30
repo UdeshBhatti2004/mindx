@@ -103,7 +103,7 @@ export default function ContactSection() {
           transition={{ delay: 0.3 }}
           className=" max-w-2xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
         >
-          Have questions about our programs or admissions? Drop us a message below and our team will get back to you shortly.
+         Have questions about our academic coaching, computer courses, or other programs? Drop us a message below and our team will get back to you shortly.
         </motion.p>
       </div>
 
