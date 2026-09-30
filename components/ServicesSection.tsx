@@ -101,7 +101,7 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto max-w-3xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
+          className=" max-w-3xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
         >
           Explore our structured academic and professional training paths built to elevate your knowledge, sharpen technical skills, and prepare you for the future.
         </motion.p>

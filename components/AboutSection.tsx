@@ -33,7 +33,7 @@
 
     export default function AboutSection() {
     return (
-        <section id="about" className="relative z-20 max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:pt-16 overflow-hidden">
+        <section id="about" className="relative z-20  px-4 py-8 sm:px-6 lg:px-8 lg:pt-16 overflow-hidden">
         
         {/* Ambient background light orbs to naturally fill left/right negative space */}
         <div className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[350px] bg-[#ff7a00]/[0.03] blur-[120px] rounded-full" />
@@ -41,7 +41,7 @@
         {/* ==========================================
             HEADER AREA (Clean, Balanced & Wide)
         =========================================== */}
-        <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+        <div className="relative  flex w-full flex-col items-center text-center">
             
             {/* Core Header Content */}
             <motion.div
@@ -85,7 +85,7 @@
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="mx-auto max-w-4xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
+            className=" max-w-4xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
             >
             mindX is a modern learning hub focused on bridging the gap between foundational knowledge and real-world application. We provide the environment and the tools you build the skillset.
             </motion.p>

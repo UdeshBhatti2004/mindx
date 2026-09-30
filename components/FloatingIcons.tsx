@@ -46,7 +46,7 @@ export default function FloatingIcons() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <div className="pointer-events-none absolute inset-0 mx-auto max-w-[1500px]">
+    <div className="pointer-events-none absolute inset-0  max-w-[1500px]">
       {floatingIcons.map((props, index) => (
         <DraggableIcon
           key={index}

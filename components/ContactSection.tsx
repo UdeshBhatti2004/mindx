@@ -108,7 +108,7 @@ export default function ContactSection() {
       </div>
 
       {/* INTERACTIVE SPLIT CONTAINER */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
         {/* LEFT SIDE: Direct Info & Vibe */}
         <motion.div
@@ -116,7 +116,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="lg:col-span-5 flex flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.02] p-8 sm:p-10 backdrop-blur-xl h-full"
+          className="lg:col-span-5 flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.02] p-8 sm:p-10 backdrop-blur-xl"
         >
           <div>
             <h3 className="font-display text-2xl font-semibold text-white mb-4">
@@ -179,7 +179,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="lg:col-span-7 rounded-3xl border border-white/10 bg-[#0c0c0c]/90 p-8 sm:p-10 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+          className="lg:col-span-7 h-full rounded-3xl border border-white/10 bg-[#0c0c0c]/90 p-8 sm:p-10 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
         >
           {isSubmitted ? (
             <motion.div

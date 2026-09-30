@@ -51,7 +51,7 @@ export default function Hero({ rotateX, rotateY }: HeroProps) {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="mx-auto mt-6 max-w-[300px] text-[13px] leading-relaxed text-white/40 sm:mt-8 sm:max-w-md sm:text-sm md:text-base md:leading-relaxed"
+          className=" mt-6 max-w-[300px] text-[13px] leading-relaxed text-white/40 sm:mt-8 sm:max-w-md sm:text-sm md:text-base md:leading-relaxed"
         >
           A place to learn, explore and build skills for the future. Unlock your potential today.
         </motion.p>

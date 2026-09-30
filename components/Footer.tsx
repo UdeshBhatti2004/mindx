@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-gradient-to-t from-[#ff7a00]/10 to-transparent blur-[120px] pointer-events-none -z-10" />
 
       {/* Perfectly aligned with max-w-7xl and identical padding structure */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl  px-4 sm:px-6 lg:px-8">
 
         {/* Top Section: Editorial Callout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
