@@ -49,7 +49,10 @@ export default function Navbar() {
             }`}
         >
           {/* LOGO */}
-          <a href="#home" className="relative z-50 flex shrink-0 items-center w-36 sm:w-44 md:w-48">
+          <a
+            href="#home"
+            className="relative z-50 flex shrink-0 items-center w-28 sm:w-44 md:w-48"
+          >
             <Image
               src="/mindx-logo.png"
               alt="mindX Institute logo"
@@ -115,18 +118,28 @@ export default function Navbar() {
             <div className="absolute top-0 right-0 -z-10 w-[80vw] h-[80vw] rounded-full" style={{ background: 'radial-gradient(circle, rgba(255,122,0,0.12) 0%, rgba(0,0,0,0) 70%)' }} />
 
             {/* Top bar inside overlay */}
-            <div className="flex items-center justify-between w-full px-6 pt-6">
-              <div className="w-32">
-                <Image src="/mindx-logo.png" alt="mindX Institute logo" width={866} height={288} className="w-full h-auto object-contain" />
-              </div>
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center h-10 w-10 rounded-full border border-white/10 bg-white/[0.03] text-white hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
-                aria-label="Close menu"
-              >
-                <X size={18} />
-              </button>
-            </div>
+            {/* Top bar inside overlay */}
+<div className="flex items-center justify-between w-full px-6 pt-6">
+
+  <div className="w-28 sm:w-32">
+    <Image
+      src="/mindx-logo.png"
+      alt="mindX Institute logo"
+      width={866}
+      height={288}
+      className="w-full h-auto object-contain"
+    />
+  </div>
+
+  <button
+    onClick={() => setMobileMenuOpen(false)}
+    className="flex items-center justify-center h-10 w-10 rounded-full border border-white/10 bg-white/[0.03] text-white hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
+    aria-label="Close menu"
+  >
+    <X size={18} />
+  </button>
+
+</div>
 
             {/* Center navigation links — Left aligned, premium sizing */}
             <div className="flex-1 flex flex-col justify-center px-8 sm:px-12">
