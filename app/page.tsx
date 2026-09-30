@@ -57,8 +57,11 @@ export default function Home() {
       <Navbar />
 
       {/* --- SECTION 1: HOME --- */}
-      <section id="home" className="relative flex min-h-screen w-full items-center justify-center px-4 sm:px-6 md:px-8">
-        <FloatingIcons />
+<section
+  id="home"
+  className="relative flex min-h-screen w-full items-start justify-center px-4 pt-20 sm:px-6 sm:pt-24 md:px-8 md:pt-24"
+>
+          <FloatingIcons />
         <Hero rotateX={rotateX} rotateY={rotateY} />
       </section>
 
