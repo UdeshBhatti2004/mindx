@@ -6,44 +6,44 @@ import { Brain, Calculator, Code2, GraduationCap, Laptop } from "lucide-react";
 
 const floatingIcons = [
   {
-    Icon: Calculator,
-    desktop: "md:left-[8%] md:top-[25%]",
-    tablet: "sm:left-[5%] sm:top-[22%]",
-    mobile: "left-[2%] top-[22%]",
-    rotate: -12,
-  },
+  Icon: Calculator,
+  desktop: "md:left-[8%] md:top-[25%]",
+  tablet: "sm:left-[5%] sm:top-[22%]",
+  mobile: "left-[2%] top-[32%]",
+  rotate: -12,
+},
 
-  {
-    Icon: Code2,
-    desktop: "md:right-[10%] md:top-[22%]",
-    tablet: "sm:right-[6%] sm:top-[20%]",
-    mobile: "right-[2%] top-[20%]",
-    rotate: 15,
-  },
+{
+  Icon: Code2,
+  desktop: "md:right-[10%] md:top-[22%]",
+  tablet: "sm:right-[6%] sm:top-[20%]",
+  mobile: "right-[2%] top-[32%]",
+  rotate: 15,
+},
 
-  {
-    Icon: GraduationCap,
-    desktop: "md:left-[12%] md:bottom-[22%]",
-    tablet: "sm:left-[8%] sm:bottom-[18%]",
-    mobile: "left-[2%] top-[62%]",
-    rotate: 8,
-  },
+{
+  Icon: GraduationCap,
+  desktop: "md:left-[12%] md:bottom-[22%]",
+  tablet: "sm:left-[8%] sm:bottom-[18%]",
+  mobile: "left-[2%] top-[68%]",
+  rotate: 8,
+},
 
-  {
-    Icon: Laptop,
-    desktop: "md:right-[15%] md:bottom-[20%]",
-    tablet: "sm:right-[8%] sm:bottom-[16%]",
-    mobile: "right-[2%] top-[60%]",
-    rotate: -10,
-  },
+{
+  Icon: Laptop,
+  desktop: "md:right-[15%] md:bottom-[20%]",
+  tablet: "sm:right-[8%] sm:bottom-[16%]",
+  mobile: "right-[2%] top-[68%]",
+  rotate: -10,
+},
 
-  {
-    Icon: Brain,
-    desktop: "md:right-[30%] md:top-[12%]",
-    tablet: "sm:right-[28%] sm:top-[10%]",
-    mobile: "hidden",
-    rotate: 5,
-  },
+{
+  Icon: Brain,
+  desktop: "md:right-[30%] md:top-[12%]",
+  tablet: "sm:right-[28%] sm:top-[10%]",
+  mobile: "hidden",
+  rotate: 5,
+},
 ];
 export default function FloatingIcons() {
   const [active, setActive] = useState<number | null>(null);

@@ -50,7 +50,7 @@ export default function Preloader() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="relative flex flex-col items-center gap-8"
+            className="relative flex flex-col items-center gap-5"
           >
             {/* LOGO & TAGLINE BLOCK */}
             <motion.div
@@ -60,21 +60,13 @@ export default function Preloader() {
               className="flex flex-col items-center "
             >
               {/* Added brightness-110 to help the original image pop */}
-              <img 
-                src="/mindx-logo.png" 
-                alt="mindX" 
-                className="w-56 sm:w-80 h-auto object-contain drop-shadow-[0_0_25px_rgba(255,122,0,0.2)] brightness-110" 
-              />
+            <img
+  src="/mindx-logo.png"
+  alt="mindx"
+  className="w-40 sm:w-56 h-auto object-contain drop-shadow-[0_0_25px_rgba(255,122,0,0.2)] brightness-110"
+/>
               
-              {/* NEW TAGLINE TEXT (Replaces "Initializing") */}
-              <motion.div
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 1 }}
-                className="font-mono text-xs sm:text-sm font-semibold tracking-[0.2em]  bg-gradient-to-r from-[#ff7a00] to-[#ffaa00] bg-clip-text text-transparent"
-              >
-                your X factor
-              </motion.div>
+             
             </motion.div>
             
             {/* SLEEK LOADING LINE */}
