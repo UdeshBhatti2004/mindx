@@ -9,35 +9,35 @@ const floatingIcons = [
     Icon: Calculator,
     desktop: "left-[8%] top-[25%]",
     tablet: "left-[5%] top-[22%]",
-    mobile: "left-[4%] top-[14%]", // Pushed up and out
+    mobile: "left-[2%] top-[22%]",
     rotate: -12,
   },
   {
     Icon: Code2,
     desktop: "right-[10%] top-[22%]",
     tablet: "right-[6%] top-[20%]",
-    mobile: "right-[4%] top-[12%]", // Pushed up and out
+    mobile: "right-[2%] top-[20%]",
     rotate: 15,
   },
   {
     Icon: GraduationCap,
     desktop: "left-[12%] bottom-[22%]",
     tablet: "left-[8%] bottom-[18%]",
-    mobile: "left-[2%] bottom-[1%]", // Pushed down
+    mobile: "left-[2%] bottom-[2%]",
     rotate: 8,
   },
   {
     Icon: Laptop,
     desktop: "right-[15%] bottom-[20%]",
     tablet: "right-[8%] bottom-[16%]",
-    mobile: "right-[2%] bottom-[1%]", // Pushed down
+    mobile: "right-[2%] bottom-[2%]",
     rotate: -10,
   },
   {
     Icon: Brain,
     desktop: "right-[30%] top-[12%]",
     tablet: "right-[28%] top-[10%]",
-    mobile: "hidden sm:flex", // Hidden on small screens to prevent text overlap
+    mobile: "hidden sm:flex",
     rotate: 5,
   },
 ];
@@ -46,7 +46,7 @@ export default function FloatingIcons() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <div className="pointer-events-none absolute inset-0  max-w-[1500px]">
+    <div className="pointer-events-none absolute inset-0 w-full max-w-[1500px]">
       {floatingIcons.map((props, index) => (
         <DraggableIcon
           key={index}
