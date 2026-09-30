@@ -11,7 +11,7 @@ interface HeroProps {
 export default function Hero({ rotateX, rotateY }: HeroProps) {
   return (
     // Replaced the fragment <></> with a flex container to handle spacing naturally
-   <div className="flex w-full flex-col items-center justify-center">
+   <div className="flex w-full flex-col items-center justify-center pt-10 sm:pt-8 ">
       
       {/* 3D PARALLAX CONTAINER */}
       <motion.div
@@ -88,17 +88,18 @@ export default function Hero({ rotateX, rotateY }: HeroProps) {
 
       {/* BOTTOM LABEL - Now in normal document flow instead of absolute positioning */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.8 }}
-        className="mt-8 flex items-center justify-center gap-3 whitespace-nowrap opacity-60 sm:mt-12"
-      >
-        <span className="h-1.5 w-1.5 rounded-full bg-[#ff7a00] shadow-[0_0_10px_rgba(255,122,0,0.8)]" />
-        <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-white/40 sm:text-[10px]">
-          Academic · Computer · Coding
-        </span>
-      </motion.div>
-      
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1, duration: 0.8 }}
+  className="mt-8 flex w-full items-center justify-center gap-3 opacity-60 sm:mt-12"
+>
+  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff7a00] shadow-[0_0_10px_rgba(255,122,0,0.8)]" />
+
+  <span className="font-mono text-center text-[9px] uppercase tracking-[0.3em] text-white/40 sm:text-[10px]">
+    Academic · Computer · Coding
+  </span>
+</motion.div>
+       
     </div>
   );
 }
