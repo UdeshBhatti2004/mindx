@@ -33,7 +33,7 @@ const features = [
 
 export default function AboutSection() {
     return (
-        <section id="about" className="relative z-20  px-4 py-8 sm:px-6 lg:px-8 lg:pt-24 overflow-hidden">
+        <section id="about" className="relative z-20  px-4  sm:py-8 sm:px-6 lg:px-8 lg:pt-24 overflow-hidden">
 
             {/* Ambient background light orbs to naturally fill left/right negative space */}
             <div className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[350px] bg-[#ff7a00]/[0.03] blur-[120px] rounded-full" />

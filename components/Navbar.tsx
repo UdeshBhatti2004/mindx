@@ -175,7 +175,7 @@ export default function Navbar() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="px-8 pb-10 flex flex-col gap-8 border-t border-white/5 pt-8 bg-gradient-to-t from-black/50 to-transparent"
+              className="px-8  flex flex-col gap-8 border-t border-white/5 pt-8 bg-gradient-to-t from-black/50 to-transparent"
             >
               <div>
                 <p className="font-display text-xl font-bold tracking-tight text-white leading-tight">
