@@ -11,7 +11,7 @@ interface HeroProps {
 export default function Hero({ rotateX, rotateY }: HeroProps) {
   return (
     // Replaced the fragment <></> with a flex container to handle spacing naturally
-    <div className="flex w-full flex-col items-center justify-center pt-10 ">
+    <div className="flex w-full flex-col items-center justify-center pt-6 sm:pt-10">
       
       {/* 3D PARALLAX CONTAINER */}
       <motion.div
@@ -91,7 +91,7 @@ export default function Hero({ rotateX, rotateY }: HeroProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.8 }}
-        className="mt-20 flex items-center justify-center gap-3 whitespace-nowrap opacity-60"
+        className="mt-10 flex items-center justify-center gap-3 whitespace-nowrap opacity-60 sm:mt-20"
       >
         <span className="h-1.5 w-1.5 rounded-full bg-[#ff7a00] shadow-[0_0_10px_rgba(255,122,0,0.8)]" />
         <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-white/40 sm:text-[10px]">
