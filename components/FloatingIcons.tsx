@@ -23,14 +23,14 @@ const floatingIcons = [
     Icon: GraduationCap,
     desktop: "left-[12%] bottom-[22%]",
     tablet: "left-[8%] bottom-[18%]",
-    mobile: "left-[2%] bottom-[2%]",
+    mobile: "left-[1%] bottom-[1%]",
     rotate: 8,
   },
   {
     Icon: Laptop,
     desktop: "right-[15%] bottom-[20%]",
     tablet: "right-[8%] bottom-[16%]",
-    mobile: "right-[2%] bottom-[2%]",
+    mobile: "right-[1%] bottom-[1%]",
     rotate: -10,
   },
   {
