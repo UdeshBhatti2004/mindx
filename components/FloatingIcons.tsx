@@ -83,7 +83,7 @@ function DraggableIcon({
   setActive,
 }: DraggableIconProps) {
   return (
-    <motion.button
+    <motion.div
       drag
       dragSnapToOrigin={true}
       dragConstraints={{ top: -90, bottom: 90, left: -90, right: 90 }}
@@ -121,6 +121,6 @@ function DraggableIcon({
         animate={{ scale: isActive ? 1 : 0 }}
         className="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-[#ff7a00] shadow-[0_0_8px_rgba(255,122,0,0.8)]"
       />
-    </motion.button>
+    </motion.div>
   );
 }
