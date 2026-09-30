@@ -59,7 +59,7 @@ export default function Home() {
       {/* --- SECTION 1: HOME --- */}
 <section
   id="home"
-  className="relative flex min-h-screen w-full items-start justify-center px-4 pt-20 sm:px-6 sm:pt-24 md:px-8 md:pt-24"
+  className="relative flex min-h-0 w-full items-start justify-center px-4 pt-20 sm:px-6 sm:pt-24 md:min-h-screen md:px-8 md:pt-24"
 >
           <FloatingIcons />
         <Hero rotateX={rotateX} rotateY={rotateY} />
