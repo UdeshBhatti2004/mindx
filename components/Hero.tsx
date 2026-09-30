@@ -11,7 +11,7 @@ interface HeroProps {
 export default function Hero({ rotateX, rotateY }: HeroProps) {
   return (
     // Replaced the fragment <></> with a flex container to handle spacing naturally
-    <div className="flex w-full flex-col items-center justify-center pt-8 sm:pt-10 md:pt-10">
+    <div className="flex w-full flex-col items-center justify-center pt-3 sm:pt-20 md:pt-20">
       
       {/* 3D PARALLAX CONTAINER */}
       <motion.div
