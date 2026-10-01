@@ -28,7 +28,7 @@ export default function Preloader() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (!shouldRender) return null; 
+  if (!shouldRender) return null;
 
   return (
     <AnimatePresence>
@@ -36,9 +36,9 @@ export default function Preloader() {
         <motion.div
           key="preloader"
           // Premium slide-up exit
-          exit={{ 
-            y: "-100%", 
-            transition: { duration: 0.9, ease: [0.76, 0, 0.24, 1] } 
+          exit={{
+            y: "-100%",
+            transition: { duration: 0.9, ease: [0.76, 0, 0.24, 1] }
           }}
           className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#050505]"
         >
@@ -61,26 +61,27 @@ export default function Preloader() {
               className="flex flex-col items-center "
             >
               {/* Added brightness-110 to help the original image pop */}
-            <Image
-  src="/mindx-logo.png"
-  alt="mindx"
-  width={404}
-  height={126}
-  className="w-40 sm:w-56 h-auto object-contain drop-shadow-[0_0_25px_rgba(255,122,0,0.2)] brightness-110"
-/>
-              
-             
+              <Image
+                src="/mindx-logo.png"
+                alt="mindx"
+                width={404}
+                height={126}
+                loading="eager"
+                className="w-40 sm:w-56 h-auto object-contain drop-shadow-[0_0_25px_rgba(255,122,0,0.2)] brightness-110"
+              />
+
+
             </motion.div>
-            
+
             {/* SLEEK LOADING LINE */}
             <div className="h-[2px] w-32 sm:w-48 overflow-hidden rounded-full bg-white/5 mt-2">
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
-                transition={{ 
-                  repeat: Infinity, 
-                  duration: 1.5, 
-                  ease: "easeInOut" 
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.5,
+                  ease: "easeInOut"
                 }}
                 className="h-full w-full rounded-full bg-gradient-to-r from-transparent via-[#ff7a00]/90 to-transparent"
               />

@@ -44,7 +44,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative z-20 w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <section id="services" className="relative z-20 w-full px-4 py-20 sm:px-6 lg:px-8">
 
       {/* CINEMATIC BACKGROUND LIGHTS */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -89,7 +89,7 @@ export default function ServicesSection() {
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="my-8 flex items-center justify-center gap-4 w-full max-w-md"
+          className="my-8 flex items-center justify-center gap-4 w-full "
         >
           <div className="h-px w-full bg-gradient-to-r from-transparent to-white/15" />
           <div className="h-1.5 w-1.5 rounded-full bg-[#ff7a00]/60 shadow-[0_0_10px_rgba(255,122,0,0.8)]" />
@@ -101,7 +101,7 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className=" max-w-3xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
+          className="  text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
         >
           Explore academic coaching, computer courses, Tally with GST, CCC, and coding classes for kids at mindx in Rajkot.        </motion.p>
       </div>

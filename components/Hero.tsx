@@ -11,12 +11,12 @@ interface HeroProps {
 export default function Hero({ rotateX, rotateY }: HeroProps) {
   return (
     // Replaced the fragment <></> with a flex container to handle spacing naturally
-   <div className="flex w-full flex-col items-center justify-center pt-10 sm:pt-8 ">
+   <div className="flex w-full flex-col items-center justify-center pt-10 sm:pt-8 lg:pt-12 2xl:pt-16">
       
       {/* 3D PARALLAX CONTAINER */}
       <motion.div
         style={{ rotateX, rotateY }}
-        className="relative z-30 flex w-full max-w-4xl flex-col items-center justify-center text-center [perspective:1000px]"
+        className="relative z-30 flex w-full max-w-4xl flex-col items-center justify-center text-center [perspective:1000px] xl:max-w-5xl 2xl:max-w-6xl"
       >
         {/* TOP LABEL */}
         <motion.div
@@ -34,24 +34,25 @@ export default function Hero({ rotateX, rotateY }: HeroProps) {
 
         {/* MAIN HEADING */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(3.2rem,10vw,7.5rem)] font-bold leading-[0.95] tracking-[-0.04em] text-white/95"
-        >
-          Build your{" "}
-          <span className="inline-block bg-gradient-to-br from-[#ff7a00] to-[#ffaa00] bg-clip-text pr-1 font-serif text-[0.9em] italic text-transparent drop-shadow-[0_0_25px_rgba(255,122,0,0.3)]">
-            x
-          </span>{" "}
-          factor.
-        </motion.h1>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+  className="font-display text-[clamp(3.2rem,10vw,7.5rem)] font-bold leading-[0.95] tracking-[-0.04em] text-white/95 xl:text-[8.5rem] 2xl:text-[10rem]"
+>
+  Build your{" "}
+  <span className="inline-block bg-gradient-to-br from-[#ff7a00] to-[#ffaa00] bg-clip-text pr-1 font-serif text-[0.9em] italic text-transparent drop-shadow-[0_0_25px_rgba(255,122,0,0.3)]">
+    x
+  </span>
+  <br />
+  factor.
+</motion.h1>
 
         {/* DESCRIPTION */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="mx-auto mt-6 max-w-[300px] text-[13px] leading-relaxed text-white/40 sm:mt-8 sm:max-w-md sm:text-sm md:text-base md:leading-relaxed"
+          className="mt-6 max-w-[300px] text-[13px] leading-relaxed text-white/40 sm:mt-8 sm:max-w-md sm:text-sm md:text-base md:leading-relaxed"
         >
           A place to learn, explore and build skills for the future. Unlock your potential today.
         </motion.p>

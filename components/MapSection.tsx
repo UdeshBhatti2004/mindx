@@ -31,7 +31,7 @@ export default function MapSection() {
   }, []);
 
   return (
-    <section className="relative z-20  w-full max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+    <section className="relative z-20  w-full px-4 pb-10 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

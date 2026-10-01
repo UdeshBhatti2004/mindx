@@ -36,7 +36,7 @@ export default function AboutSection() {
         <section id="about" className="relative z-20  px-4  sm:py-8 sm:px-6 lg:px-8 pt-20 sm:pt-24 overflow-hidden">
 
             {/* Ambient background light orbs to naturally fill left/right negative space */}
-            <div className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[350px] bg-[#ff7a00]/[0.03] blur-[120px] rounded-full" />
+            <div className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-full  h-[350px] bg-[#ff7a00]/[0.03] blur-[120px] rounded-full" />
 
             {/* ==========================================
             HEADER AREA (Clean, Balanced & Wide)
@@ -74,7 +74,7 @@ export default function AboutSection() {
                     whileInView={{ scaleX: 1, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2, duration: 0.8 }}
-                    className="my-8 flex items-center justify-center gap-4 w-full max-w-md"
+                    className="my-8 flex items-center justify-center gap-4 w-full"
                 >
                     <div className="h-px w-full bg-gradient-to-r from-transparent to-white/15" />
                     <div className="h-1.5 w-1.5 rounded-full bg-[#ff7a00]/60 shadow-[0_0_10px_rgba(255,122,0,0.8)]" />
@@ -86,7 +86,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="max-w-2xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
+                    className="text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
                 >
                     mindx is a learning institute in Rajkot offering academic coaching,
                     academic classes, computer courses, Tally with GST, CCC, and coding

@@ -51,7 +51,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative z-20 w-full max-w-7xl  px-4 py-16 sm:px-6 lg:px-8">
+    <section id="contact" className="relative z-20 w-full px-4 py-16 sm:px-6 lg:px-8">
 
       {/* Cinematic ambient background glow */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden flex justify-center items-center">
@@ -89,7 +89,7 @@ export default function ContactSection() {
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="my-8 flex items-center justify-center gap-4 w-full max-w-md"
+          className="my-8 flex items-center justify-center gap-4 w-full "
         >
           <div className="h-px w-full bg-gradient-to-r from-transparent to-white/15" />
           <div className="h-1.5 w-1.5 rounded-full bg-[#ff7a00]/60 shadow-[0_0_10px_rgba(255,122,0,0.8)]" />
@@ -101,7 +101,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className=" max-w-2xl text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
+          className=" text-sm leading-relaxed text-white/40 sm:text-base md:text-lg"
         >
          Have questions about our academic coaching, computer courses, or other programs? Drop us a message below and our team will get back to you shortly.
         </motion.p>
@@ -191,7 +191,7 @@ export default function ContactSection() {
                 <CheckCircle2 size={32} />
               </div>
               <h3 className="font-display text-2xl font-bold text-white mb-2">Message Received!</h3>
-              <p className="text-sm text-white/50 max-w-md">
+              <p className="text-sm text-white/50 ">
                 Thank you for reaching out. Our team will review your inquiry regarding <span className="text-[#ff7a00]">{selectedInterest}</span> and get back to you shortly.
               </p>
               <button
