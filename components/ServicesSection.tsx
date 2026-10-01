@@ -25,7 +25,7 @@ const services = [
   {
     tag: "Digital Literacy",
     title: "CCC Course",
-    description: "Build official digital competency operating systems, office automation, internet navigation, and certified IT skills.",
+    description: "Build digital skills through computer fundamentals, office applications, internet usage, and essential IT skills.",
     icon: BookOpen,
     gradient: "from-[#ff7a00]/10 via-amber-500/5 to-transparent",
     borderHover: "hover:border-[#ff7a00]/40",

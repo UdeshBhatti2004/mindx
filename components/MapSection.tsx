@@ -50,9 +50,8 @@ export default function MapSection() {
 
           <div className="pr-4">
             <p className="font-display text-sm font-semibold tracking-wide text-white">
-              mindx Institute
+              mindx
             </p>
-
             <p className="mt-0.5 font-mono text-xs text-white/50">
               Rajkot, Gujarat, India
             </p>

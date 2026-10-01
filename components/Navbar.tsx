@@ -122,7 +122,7 @@ export default function Navbar() {
 
             <div className="flex items-center justify-between w-full px-6 pt-6">
               <div className="w-24 sm:w-32">
-                <Image src="/mindx-logo.png" alt="mindX Institute logo" width={866} height={288} className="w-full h-auto object-contain" />
+                <Image src="/mindx-logo.png" alt="mindx logo" width={866} height={288} className="w-full h-auto object-contain" />
               </div>
               </div>
               <button
