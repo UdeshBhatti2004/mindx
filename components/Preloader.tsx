@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
@@ -60,9 +61,11 @@ export default function Preloader() {
               className="flex flex-col items-center "
             >
               {/* Added brightness-110 to help the original image pop */}
-            <img
+            <Image
   src="/mindx-logo.png"
   alt="mindx"
+  width={404}
+  height={126}
   className="w-40 sm:w-56 h-auto object-contain drop-shadow-[0_0_25px_rgba(255,122,0,0.2)] brightness-110"
 />
               
