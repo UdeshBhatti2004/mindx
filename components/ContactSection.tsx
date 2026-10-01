@@ -51,7 +51,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative z-20 w-full px-4 py-16 sm:px-6 lg:px-8">
+    <section id="contact" className="relative z-20 w-full px-4 py-12 sm:px-6 lg:px-8">
 
       {/* Cinematic ambient background glow */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden flex justify-center items-center">
