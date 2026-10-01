@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
+
 import { Geist, Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
+
 import "./globals.css";
+
 import SmoothScroll from "../components/SmoothScroll";
+
 import ChatWidget from "../components/ChatWidget";
 
 const geistSans = Geist({
@@ -16,20 +20,20 @@ const geistMono = Geist_Mono({
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter"
+  variable: "--font-inter",
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-space"
+  variable: "--font-space",
 });
 
 // ---------------------------------------------------------------------------
-// ⚠️  REPLACE with your real production domain (no trailing slash).
-// This single constant feeds metadataBase, canonical URLs, OG/Twitter tags,
-// sitemap.ts, robots.ts and the JSON-LD block below.
+// Production domain
 // ---------------------------------------------------------------------------
+
 const SITE_URL = "https://www.mind-x.co.in";
+
 const SITE_NAME = "mindx";
 
 const TITLE = "mindx | Coaching & Computer Classes in Rajkot";
@@ -51,14 +55,20 @@ const KEYWORDS = [
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+
   title: {
     default: TITLE,
-    template: "%s | mindX Institute",
+    template: "%s | mindx",
   },
+
   description: DESCRIPTION,
+
   keywords: KEYWORDS,
+
   applicationName: SITE_NAME,
-  authors: [{ name: "mindX Institute" }],
+
+  authors: [{ name: "mindx" }],
+
   category: "education",
 
   alternates: {
@@ -68,6 +78,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -84,12 +95,13 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: TITLE,
     description: DESCRIPTION,
+
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "mindX Institute — Learn, Build, Grow",
+        alt: "mindx — Learn, Build, Grow",
       },
     ],
   },
@@ -102,8 +114,11 @@ export const metadata: Metadata = {
   },
 
   icons: {
+    // Keep the favicon separate from the main brand logo.
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
+
+    // Apple icon uses the main mindx brand logo.
     apple: "/mindx-logo.png",
   },
 
@@ -120,85 +135,131 @@ export const viewport = {
   initialScale: 1,
 };
 
-// JSON-LD structured data — tells Google exactly what mindX is, where it is,
-// and what it teaches. Renders as inert <script> markup, zero runtime cost.
+// ---------------------------------------------------------------------------
+// JSON-LD structured data
+// ---------------------------------------------------------------------------
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "mindx",
-  alternateName: "mindx Institute",
-  url: SITE_URL,
-  logo: `${SITE_URL}/mindx-logo.png`,
-  image: `${SITE_URL}/og-image.jpg`,
-  description: DESCRIPTION,
-  email: "mindxyourxfactor@gmail.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Rajkot",
-    addressRegion: "Gujarat",
-    addressCountry: "IN",
-  },
-  areaServed: {
-    "@type": "City",
-    name: "Rajkot",
-  },
-  sameAs: [
-    // ⚠️ Add real social profile URLs here once they exist
-    // "https://www.instagram.com/mindxinstitute",
-    // "https://www.linkedin.com/company/mindxinstitute",
+
+  "@graph": [
+    // -----------------------------------------------------------------------
+    // Website identity
+    // -----------------------------------------------------------------------
+    {
+      "@type": "WebSite",
+      name: "mindx",
+      url: SITE_URL,
+    },
+
+    // -----------------------------------------------------------------------
+    // Organization identity
+    // -----------------------------------------------------------------------
+    {
+      "@type": "EducationalOrganization",
+
+      name: "mindx",
+
+      alternateName: "mindx Institute",
+
+      url: SITE_URL,
+
+      // Main brand logo used by the website/navbar.
+      logo: `${SITE_URL}/mindx-logo.png`,
+
+      image: `${SITE_URL}/og-image.jpg`,
+
+      description: DESCRIPTION,
+
+      email: "mindxyourxfactor@gmail.com",
+
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Rajkot",
+        addressRegion: "Gujarat",
+        addressCountry: "IN",
+      },
+
+      areaServed: {
+        "@type": "City",
+        name: "Rajkot",
+      },
+
+      sameAs: [
+        // Add real social profile URLs here once they exist.
+      ],
+
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+
+        name: "mindx Programs",
+
+        itemListElement: [
+          {
+            "@type": "Course",
+
+            name: "Standards 1 to 9 (English Medium)",
+
+            description:
+              "Comprehensive academic support for young minds, with conceptual clarity, homework guidance, and core subject mastery.",
+
+            provider: {
+              "@type": "EducationalOrganization",
+              name: "mindx",
+            },
+          },
+
+          {
+            "@type": "Course",
+
+            name: "Tally with GST Course",
+
+            description:
+              "Financial accounting from scratch — ledger creation, inventory management, taxation, and GST filing.",
+
+            provider: {
+              "@type": "EducationalOrganization",
+              name: "mindx",
+            },
+          },
+
+          {
+            "@type": "Course",
+
+            name: "CCC Course",
+
+            description:
+              "Digital literacy course covering computer fundamentals, office applications, internet usage, and essential IT skills.",
+
+            provider: {
+              "@type": "EducationalOrganization",
+              name: "mindx",
+            },
+          },
+
+          {
+            "@type": "Course",
+
+            name: "Coding for Kids (Scratch)",
+
+            description:
+              "Introduces children to logic and computer science through visual, block-based programming.",
+
+            provider: {
+              "@type": "EducationalOrganization",
+              name: "mindx",
+            },
+          },
+        ],
+      },
+    },
   ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "mindx Programs",
-    itemListElement: [
-      {
-        "@type": "Course",
-        name: "Standards 1 to 9 (English Medium)",
-        description:
-          "Comprehensive academic support for young minds, with conceptual clarity, homework guidance, and core subject mastery.",
-        provider: {
-          "@type": "EducationalOrganization",
-          name: "mindx"
-        },
-      },
-      {
-        "@type": "Course",
-        name: "Tally with GST Course",
-        description:
-          "Financial accounting from scratch — ledger creation, inventory management, taxation, and GST filing.",
-        provider: {
-          "@type": "EducationalOrganization",
-          name: "mindx"
-        },
-      },
-      {
-        "@type": "Course",
-        name: "CCC Course",
-        description:
-          "Digital literacy course covering computer fundamentals, office applications, internet usage, and essential IT skills.",
-        provider: {
-          "@type": "EducationalOrganization",
-          name: "mindx"
-        },
-      },
-      {
-        "@type": "Course",
-        name: "Coding for Kids (Scratch)",
-        description:
-          "Introduces children to logic and computer science through visual, block-based programming.",
-        provider: {
-          "@type": "EducationalOrganization",
-          name: "mindx"
-        },
-      },
-    ],
-  },
 };
 
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html
@@ -209,13 +270,16 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
         />
       </head>
+
       <body className="min-h-full flex flex-col bg-[#080808] font-sans text-white">
         <SmoothScroll>
           {children}
-          <ChatWidget/>
+          <ChatWidget />
         </SmoothScroll>
       </body>
     </html>
