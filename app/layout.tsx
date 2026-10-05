@@ -253,6 +253,60 @@ const jsonLd = {
         ],
       },
     },
+
+    // -----------------------------------------------------------------------
+    // Local business identity
+    // -----------------------------------------------------------------------
+    {
+      "@type": "LocalBusiness",
+
+      name: "mindx",
+
+      url: SITE_URL,
+
+      image: `${SITE_URL}/og-image.jpg`,
+
+      telephone: "+91 79904 96001",
+
+      email: "mindxyourxfactor@gmail.com",
+
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "Shyasa Society, 879, Patrakar Colony, Street Number 1, Near Anjani Nagar, Shubash Nagar",
+        addressLocality: "Rajkot",
+        addressRegion: "Gujarat",
+        postalCode: "360007",
+        addressCountry: "IN",
+      },
+
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 22.3039438,
+        longitude: 70.7846653,
+      },
+
+      areaServed: {
+        "@type": "City",
+        name: "Rajkot",
+      },
+
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          opens: "09:30",
+          closes: "20:30",
+        },
+      ],
+    },
   ],
 };
 
