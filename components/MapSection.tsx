@@ -60,7 +60,7 @@ export default function MapSection() {
 
         {/* Action Button */}
         <a
-          href="https://maps.google.com/?q=Rajkot,Gujarat"
+          href="https://www.google.com/maps/dir/?api=1&destination=22.3039438%2C70.7846653"
           target="_blank"
           rel="noopener noreferrer"
           className="absolute bottom-6 right-6 z-10 flex items-center gap-2 rounded-full bg-[#ff7a00] px-5 py-2.5 text-xs font-semibold text-black shadow-[0_0_20px_rgba(255,122,0,0.4)] transition-transform hover:scale-105 sm:bottom-8 sm:right-8"
@@ -76,19 +76,19 @@ export default function MapSection() {
         >
           {loadMap && (
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118106.70010221669!2d70.73147529437155!3d22.30516132717804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cbd84%3A0x11cea626e46ea537!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{
-                border: 0,
-                filter:
-                  "grayscale(100%) invert(92%) contrast(83%) hue-rotate(180deg)",
-              }}
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0"
-            />
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118106.70010221669!2d70.73147529437155!3d22.30516132717804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cbd84%3A0x11cea626e46ea537!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+  width="100%"
+  height="100%"
+  style={{
+    border: 0,
+    filter:
+      "grayscale(100%) invert(92%) contrast(83%) hue-rotate(180deg)",
+  }}
+  allowFullScreen={false}
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  className="absolute inset-0"
+/>
           )}
 
           {/* Overlay */}
