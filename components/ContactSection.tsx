@@ -133,7 +133,9 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs font-mono uppercase tracking-wider text-white/40">Location</p>
-                  <p className="text-sm text-white/80 mt-1">Rajkot, Gujarat, India</p>
+                  <p className="text-sm text-white/80 mt-1">Shyasa Society, 879, Patrakar Colony, Street Number 1,
+Near Anjani Nagar, Shubash Nagar,
+Rajkot, Gujarat 360007, India</p>
                 </div>
               </li>
 
