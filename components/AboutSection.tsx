@@ -48,7 +48,7 @@ export default function AboutSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#ff7a00]/30 bg-[#ff7a00]/10 px-4 py-2 text-xs font-medium text-[#ff7a00] backdrop-blur-sm"
+                    className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#ff7a00]/30 bg-[#ff7a00]/10 px-4 py-2 text-xs font-medium text-[#ff7a00]"
                 >
                     <Sparkles size={14} />
                     <span>Who We Are</span>
@@ -128,7 +128,7 @@ function GlowCard({ feature, index }: { feature: any; index: number }) {
     return (
         <motion.div
             onMouseMove={handleMouseMove}
-            className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/5 bg-white/[0.02] p-8 backdrop-blur-md transition-colors hover:bg-white/[0.04] sm:p-10 ${feature.colSpan}`}
+            className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/5 bg-white/[0.02] p-8 transition-colors hover:bg-white/[0.04] sm:p-10 ${feature.colSpan}`}
         >
             {/* The glowing flashlight effect */}
             <motion.div

@@ -8,7 +8,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     <ReactLenis 
       root 
       options={{
-        lerp: 0.1, // Increased from 0.05 (makes it more responsive, less "sluggish")
+        lerp: 0.2, // Increased from 0.05 (makes it more responsive, less "sluggish")
         duration: 1.2, // Slightly faster base animation
         smoothWheel: true,
         wheelMultiplier: 1.2, // Speeds up the scroll wheel distance

@@ -64,7 +64,7 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#ff7a00]/30 bg-[#ff7a00]/10 px-4 py-2 text-xs font-medium text-[#ff7a00] backdrop-blur-sm"
+          className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#ff7a00]/30 bg-[#ff7a00]/10 px-4 py-2 text-xs font-medium text-[#ff7a00]"
         >
           <Sparkles size={14} />
           <span>Start Your Journey</span>
@@ -116,7 +116,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="lg:col-span-5 flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.02] p-8 sm:p-10 backdrop-blur-xl"
+          className="lg:col-span-5 flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.02] p-8 sm:p-10"
         >
           <div>
             <h3 className="font-display text-2xl font-semibold text-white mb-4">
@@ -181,7 +181,7 @@ Rajkot, Gujarat 360007, India</p>
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="lg:col-span-7 h-full rounded-3xl border border-white/10 bg-[#0c0c0c]/90 p-8 sm:p-10 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+          className="lg:col-span-7 h-full rounded-3xl border border-white/10 bg-[#0c0c0c]/90 p-8 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
         >
           {isSubmitted ? (
             <motion.div

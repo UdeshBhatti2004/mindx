@@ -64,7 +64,7 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#ff7a00]/30 bg-[#ff7a00]/10 px-4 py-2 text-xs font-medium text-[#ff7a00] backdrop-blur-sm"
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#ff7a00]/30 bg-[#ff7a00]/10 px-4 py-2 text-xs font-medium text-[#ff7a00]"
         >
           <Sparkles size={14} />
           <span>What We Offer</span>
@@ -138,7 +138,7 @@ export default function ServicesSection() {
                   scale: 1.01,
                   transition: { duration: 0.3, ease: "easeOut" },
                 }}
-                className={`group relative overflow-hidden rounded-3xl border border-white/[0.07] bg-[#0c0c0c]/90 p-6 backdrop-blur-xl transition-colors duration-500 sm:p-8 ${service.borderHover}`}
+                className={`group relative overflow-hidden rounded-3xl border border-white/[0.07] bg-[#0c0c0c]/90 p-6 transition-colors duration-500 sm:p-8 ${service.borderHover}`}
               >
                 {/* Spotlight gradient */}
                 <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 transition-opacity duration-700 group-hover:opacity-100`} />

@@ -21,7 +21,7 @@ export default function MapSection() {
         }
       },
       {
-        rootMargin: "300px",
+        rootMargin: "0px",
       }
     );
 
@@ -40,10 +40,10 @@ export default function MapSection() {
           duration: 0.8,
           ease: [0.16, 1, 0.3, 1],
         }}
-        className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0c0c0c]/90 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-2xl sm:p-4"
+        className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0c0c0c]/90 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.5)] sm:p-4"
       >
         {/* Top Info Bar */}
-        <div className="absolute left-6 top-6 z-10 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur-md sm:left-8 sm:top-8">
+        <div className="absolute left-6 top-6 z-10 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/60 p-4 sm:left-8 sm:top-8">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#ff7a00]/20 text-[#ff7a00] ring-1 ring-[#ff7a00]/30">
             <MapPin size={18} />
           </div>
