@@ -55,10 +55,24 @@ export default function Footer() {
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-widest text-white/30">Socials</p>
               <ul className="space-y-2">
-                <li><a href="#" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Twitter / X</a></li>
-                <li><a href="#" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a></li>
-                <li><a href="#" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
-                <li><a href="#" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
+                <li>
+                  <a href="#" target="_blank" rel="noreferrer" aria-label="Instagram" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <span>Instagram</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+                      <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.34 18H5.67V9.4h2.67ZM7 8.23a1.55 1.55 0 1 1 .02-3.1 1.55 1.55 0 0 1-.02 3.1ZM18.34 18h-2.67v-4.18c0-1-.02-2.29-1.4-2.29s-1.61 1.1-1.61 2.22V18H10V9.4h2.56v1.17h.04a2.8 2.8 0 0 1 2.51-1.38c2.69 0 3.19 1.77 3.19 4.08Z" />
+                    </svg>
+                    <span>LinkedIn</span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
